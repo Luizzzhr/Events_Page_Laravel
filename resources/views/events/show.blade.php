@@ -17,7 +17,7 @@
             <p class="event-owner"><ion-icon name="star-outline"></ion-icon>{{$eventOwner['name']}}</p>
             <p class="event-date"><ion-icon  name="calendar-number-outline"></ion-icon>{{$event->date}}</p>
             @if(!$hasUserJoined)
-            <<form action="{{ route('events.join', $event->id) }}" method="POST">
+            <form action="{{ route('events.join', $event->id) }}" method="POST">
               @csrf
               <a href="/events/join/{{ $event->id }}" 
                 class="btn btn-primary" 
